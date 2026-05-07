@@ -5,7 +5,7 @@ Using sonar data from Ocean Networks Canada (ONC), develop a model that can dete
 *The motivation is to track the health of sablefish population.* 
 
 ## Program Description
-| <img src="Assets/sonar_example.png" width="200" alt="Example of Sonar">| <img src="Assets/tracked_fish_1.png" width="200" alt="Tracked fish frame 1"> <img src="Assets/tracked_fish_1.png" width="200" alt="Tracked fish frame 2"> |
+| <img src="Assets/sonar_example.png" width="200" alt="Example of Sonar">| <img src="Assets/tracked_fish_1.jpg" width="200" alt="Tracked fish frame 1"> <img src="Assets/tracked_fish_1.jpg" width="200" alt="Tracked fish frame 2"> |
 | :---: | :---: |
 | 1. Downloads and constructs sonar data | 2. Detects and tracks fish |
 
@@ -40,7 +40,7 @@ Trains data using YOLOv11 and outputs predictions using best found model
 ### Scripts
 **download_ONC_data** (Step 1) [Made by Declan]
 <br>Downloads sonar and video files from ONC data base.
-<br><img src="Assets/download_result.png" width="120" alt="Results of download">
+<br><img src="Assets/download_result.png" width="200" alt="Results of download">
 
 **contruct_fused_frames.py** (Step 2) [Draft by Adriel, Edited by Alanna] <br>
 1. Creates PNG of .mat sonar code
@@ -49,7 +49,7 @@ Trains data using YOLOv11 and outputs predictions using best found model
 4. And combines them all into one image for annotation
 
 Resulting in...<br>
-<img src="Assets/combined_image.png" width="310" alt="Combined image">
+<img src="Assets/combined_image.png" width="600" alt="Combined image">
 
 **make_data_set_helper.py** (Step 3)
 <br>Toy script to extract a specified amount of constructed frames along with some context frames, to help form the dataset. 
