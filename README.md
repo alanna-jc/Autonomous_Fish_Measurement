@@ -4,11 +4,33 @@ Using sonar data from Ocean Networks Canada (ONC), develop a model that can dete
 
 The motivation is to track the health of sablefish population. 
 
+## TODO
+- Try FFIR instead of GMM bgs
+- Add 'download' and 'CSV generation' to program
+- Create user prompts for use ease
+- Create python package of program
+- Develop further testing
+- Increase dataset
+- Build in more generalization for future use cases
+
 ## Repo Structure
 ### Model
 **yolo_model.py**
 
-Trains data using YOLO pretrained model and outputs predictions using best found model
+Trains data using YOLOv11 and outputs predictions using best found model
+
+### Program
+**construct_frames.py**
+
+Contains functions for creation of background subtracted frames
+
+**calc_length.py**
+
+Calculates the length of the fish given the largest bounding box from tracking
+
+**main.py**
+
+Runs full pipeline that creates constructed image, runs AI detection on, tracks fish, finds length, reports.
 
 ### Scripts
 **download_ONC_data** (Step 1) [Made by Declan]
@@ -20,20 +42,12 @@ Downloads sonar and video files from ONC data base using Alanna token.
 
 **contruct_fused_frames.py** (Step 2) [Draft by Adriel, Edited by Alanna]
 
-Creates PNG of .mat sonar code
+1. Creates PNG of .mat sonar code
+2. Uses Gaussian Mixture Model (GMM) background subtraction to create background subtracted version (bgs)
+3. Finds associated video frame
+4. And combines them all into one image for annotation
 
-[insert image of that]
-
-Uses Gaussian Mixture Model (GMM) background subtraction to create background subtracted version (bgs)
-
-[insert image of that]
-
-Finds associated video frame
-
-[insert image of that]
-
-And combines them all into one image for annotation
-
+Resulting in...<br>
 [insert image of that]
 
 
@@ -46,7 +60,4 @@ Toy script to extract a specified amount of constructed frames along with some c
 
 Annotations are done on Background subtracted section of combined image. After annotation, this script finds the corresponding original sonar image to the annotated one, and adjust bounding boxes.
 
-[insert some sort of image explaining?]
-
-## TODO
 
