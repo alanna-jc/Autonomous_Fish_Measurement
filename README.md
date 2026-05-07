@@ -6,9 +6,12 @@ The motivation is to track the health of sablefish population.
 
 ## TODO
 - Try FFIR instead of GMM bgs
-- Implement tracking Program
-- Create polished program full pipeline
-- Improve dataset generation scripts
+- Add 'download' and 'CSV generation' to program
+- Create user prompts for use ease
+- Create python package of program
+- Develop further testing
+- Increase dataset
+- Build in more generalization for future use cases
 
 ## Repo Structure
 ### Model
