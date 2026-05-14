@@ -1,4 +1,4 @@
-# Autonomaus Fish Measurer using Sonar Vision
+# Autonomous Fish Measurer using Sonar Vision
 ## Objective
 Using sonar data from Ocean Networks Canada (ONC), develop a model that can detect a fish, find it's length, and report back the average fish length over a specified time period. 
 
